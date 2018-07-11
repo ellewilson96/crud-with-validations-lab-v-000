@@ -46,4 +46,8 @@ end
     params.permit(:title, :released, :artist_name, :genre)
   end
 
+  def set_song!
+    @song = Song.find(params[:id])
+  end
+
 end
