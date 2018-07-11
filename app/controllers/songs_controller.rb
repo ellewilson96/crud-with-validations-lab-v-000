@@ -25,6 +25,20 @@ class SongsController < ApplicationController
   end
 end
 
+def update
+    @song.update(song_params)
+    if @song.valid?
+      redirect_to song_path(@song)
+    else
+      render :edit
+    end
+
+    def destroy
+      @song.destroy
+      redirect_to songs_path
+    end
+  end
+
   private
 
   def song_params
