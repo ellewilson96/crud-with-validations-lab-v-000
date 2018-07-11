@@ -1,1 +1,7 @@
-<h3><%= @songs.title %> by <%= @songs.artist_name %></h3>
+tbody>
+<% @songs.each do |s| %>
+  <tr>
+    <td><%= s.title %></td>
+  </tr>
+<% end %>
+</tbody>
